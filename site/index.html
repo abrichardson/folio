@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Folio · Private personal finance for macOS and Windows</title>
+    <meta
+      name="description"
+      content="Folio is a free, open-source personal finance app for macOS and Windows. Your finances stay on your computer in a password-encrypted file. No account, no cloud, no tracking."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="./"><img src="favicon.svg" alt="" />folio<b>.</b></a>
+        <nav class="links" aria-label="Site">
+          <a href="#features" class="wide">Features</a>
+          <a href="#privacy" class="wide">Privacy</a>
+          <a href="docs/">Docs</a>
+          <a href="https://github.com/abrichardson/folio">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <h1>Your money, on your computer.</h1>
+          <p class="lede">
+            Folio is a free, open-source personal finance app for macOS and Windows, in the spirit
+            of classic Quicken. Import your bank files, plan your bills, and see where things stand
+            — all in a password-encrypted file that never leaves your computer.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/abrichardson/folio/releases/latest"
+              >Download for macOS or Windows</a
+            >
+            <a class="button ghost" href="https://github.com/abrichardson/folio">View the source</a>
+          </div>
+          <p class="note">Free and MIT-licensed. No account, no subscription, no tracking.</p>
+          <figure>
+            <img
+              src="images/overview.png"
+              width="2720"
+              height="1720"
+              alt="Folio's Overview: net worth, income and spending this month, a 30-day cash-flow forecast, and budgets, shown with fictional sample data."
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="band" id="features">
+        <div class="wrap">
+          <h2>Everything a household ledger needs</h2>
+          <p class="sub">
+            The core works without any bank-data subscription: bring in the files your bank already
+            gives you.
+          </p>
+          <div class="grid">
+            <div class="card">
+              <h3>Bank file import</h3>
+              <p>
+                QFX, OFX, QBO and CSV from any bank, with duplicate detection, remembered column
+                settings, and Undo for every import.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Credit card statements</h3>
+              <p>
+                Read balance, limit, APR, minimum payment, due date, and promotional balances
+                straight from statement PDFs, on your computer.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Register and reconcile</h3>
+              <p>
+                Running balances, cleared marks, statement reconciliation, rules, custom categories,
+                splits, transfers, receipts, and refunds.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Bills and cash flow</h3>
+              <p>
+                Bills and paychecks on any schedule, and a 30, 60, or 90-day forecast that warns
+                before your checking balance runs low.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Cards, loans, and BNPL</h3>
+              <p>
+                0% and deferred-interest deadlines with the payment that clears them, and
+                buy-now-pay-later plans and loans with their schedules.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Budgets, goals, reports</h3>
+              <p>
+                Grouped budgets with rollover, goals with earmarked savings, and reports you can
+                export as CSV.
+              </p>
+            </div>
+          </div>
+
+          <div class="shot">
+            <div class="copy">
+              <h3>See the weeks ahead</h3>
+              <p>
+                Scheduled income, bills, card payments, and installments become a projected balance,
+                with the lowest point and any shortfall called out before it happens.
+              </p>
+            </div>
+            <img
+              src="images/cash-flow.png"
+              width="2720"
+              height="1720"
+              loading="lazy"
+              alt="The Cash flow page: starting, lowest, and ending balance over 30 days, and a projected balance chart."
+            />
+          </div>
+          <div class="shot">
+            <div class="copy">
+              <h3>Stay a step ahead of your cards</h3>
+              <p>
+                Balances, limits, utilization, due dates, and promotional offers with deadlines and
+                the monthly payment each one needs.
+              </p>
+            </div>
+            <img
+              src="images/credit-cards.png"
+              width="2720"
+              height="1720"
+              loading="lazy"
+              alt="The Credit cards page with balances, limits, and payment details for fictional cards."
+            />
+          </div>
+          <div class="shot">
+            <div class="copy">
+              <h3>The bigger picture</h3>
+              <p>
+                Spending by category against the period before, top payees, income vs. spending,
+                recurring costs, interest and fees, debt, and net worth.
+              </p>
+            </div>
+            <img
+              src="images/reports.png"
+              width="2720"
+              height="1720"
+              loading="lazy"
+              alt="The Reports page showing spending by category compared with the previous period."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="band privacy" id="privacy">
+        <div class="wrap">
+          <h2>Private by design</h2>
+          <p class="sub">
+            There is no Folio server. Nothing to sign up for, and nothing to breach but the file on
+            your own disk.
+          </p>
+          <div class="grid">
+            <div class="card">
+              <h3>Encrypted at rest</h3>
+              <p>
+                Everything lives in one SQLCipher-encrypted file, unlocked with a password only you
+                know. It locks itself when you step away.
+              </p>
+            </div>
+            <div class="card">
+              <h3>No network access</h3>
+              <p>
+                The app's security policy blocks remote connections. Statement PDFs and bank files
+                are read on your computer.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Backups you control</h3>
+              <p>
+                Automatic daily encrypted backups, restore in a click, and a copy to any drive you
+                choose.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Open source</h3>
+              <p>
+                Read every line on GitHub. Folio is MIT-licensed and free to use, change, and share.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="download">
+        <div class="wrap">
+          <h2>Install</h2>
+          <p class="sub">
+            Download the installer for your computer from the
+            <a href="https://github.com/abrichardson/folio/releases/latest">latest release</a>: the
+            <code>.dmg</code> for macOS (Apple Silicon and Intel) or the <code>.exe</code> or
+            <code>.msi</code> for Windows 10 and 11.
+          </p>
+          <ol class="steps">
+            <li>
+              The installers are not code-signed yet, so your computer will ask before opening them.
+              On <b>macOS</b>, right-click Folio in Applications and choose <b>Open</b> the first
+              time (or allow it in System Settings → Privacy &amp; Security).
+            </li>
+            <li>
+              On <b>Windows</b>, choose <b>More info → Run anyway</b> when SmartScreen appears.
+            </li>
+            <li>
+              Choose a password for your Folio file. Write it down somewhere safe: there is no way
+              to recover it.
+            </li>
+            <li>
+              Explore the sample workspace, then choose <b>Start with my finances</b> and import
+              your first bank file.
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>Folio · MIT License · Made for a healthier relationship with money.</span>
+        <span
+          ><a href="docs/">Documentation</a> ·
+          <a href="https://github.com/abrichardson/folio/issues">Issues</a> ·
+          <a href="docs/security.html">Security</a></span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,345 @@
+:root {
+  --ink: #1d2a22;
+  --soft: #5d6b5c;
+  --line: #e3eae2;
+  --paper: #f6f8f4;
+  --card: #ffffff;
+  --forest: #102f29;
+  --forest-2: #17453b;
+  --lime: #bcd792;
+  --accent: #1d6a50;
+  --max: 1120px;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font:
+    16px/1.6 Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+a {
+  color: var(--accent);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header.top {
+  background: var(--forest);
+  color: #e8f1ec;
+}
+header.top .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 64px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f4fbf6;
+  font-weight: 650;
+  font-size: 24px;
+  letter-spacing: -0.8px;
+  text-decoration: none;
+}
+.brand img {
+  width: 24px;
+  height: 24px;
+}
+.brand b {
+  color: var(--lime);
+}
+nav.links {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+nav.links a {
+  color: #c1d3cd;
+  text-decoration: none;
+}
+nav.links a:hover {
+  color: #fff;
+}
+.hero {
+  background: var(--forest);
+  color: #e8f1ec;
+  padding: 56px 0 0;
+  overflow: hidden;
+}
+.hero h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: clamp(36px, 6vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -1px;
+  margin: 0 0 18px;
+  max-width: 14ch;
+  color: #fff;
+}
+.hero p.lede {
+  font-size: clamp(17px, 2.2vw, 20px);
+  color: #c1d3cd;
+  max-width: 46ch;
+  margin: 0 0 28px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 15px;
+}
+.button.primary {
+  background: var(--lime);
+  color: var(--forest);
+}
+.button.ghost {
+  color: #e8f1ec;
+  border: 1px solid #3b6457;
+}
+.note {
+  font-size: 13px;
+  color: #8bab9e;
+  margin-top: 14px;
+}
+.hero figure {
+  margin: 44px 0 0;
+}
+.hero figure img {
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -10px 60px rgb(0 0 0 / 0.35);
+}
+section.band {
+  padding: 64px 0;
+}
+section.band h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: clamp(26px, 3.5vw, 36px);
+  margin: 0 0 8px;
+}
+section.band p.sub {
+  color: var(--soft);
+  margin: 0 0 32px;
+  max-width: 60ch;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+}
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+.card p {
+  margin: 0;
+  color: var(--soft);
+  font-size: 14px;
+}
+.shot {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 32px;
+  align-items: center;
+  margin-top: 48px;
+}
+.shot:nth-child(even) {
+  grid-template-columns: 1.6fr 1fr;
+}
+.shot:nth-child(even) .copy {
+  order: 2;
+}
+.shot img {
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgb(16 47 41 / 0.08);
+}
+.shot h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+.shot p {
+  color: var(--soft);
+  margin: 0;
+}
+.privacy {
+  background: var(--forest-2);
+  color: #e8f1ec;
+}
+section.band.privacy p.sub {
+  color: #c1d3cd;
+}
+.privacy .card {
+  background: rgb(255 255 255 / 0.06);
+  border-color: rgb(255 255 255 / 0.12);
+}
+.privacy .card p {
+  color: #c1d3cd;
+}
+.steps {
+  counter-reset: step;
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.steps li {
+  counter-increment: step;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px 14px 52px;
+  position: relative;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 16px;
+  top: 14px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--lime);
+  font-size: 13px;
+  display: grid;
+  place-items: center;
+}
+code {
+  background: #edf1ec;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 40px;
+  color: var(--soft);
+  font-size: 14px;
+}
+footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  justify-content: space-between;
+}
+/* Documentation pages */
+.doc {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: clamp(20px, 4vw, 48px);
+  margin: 32px auto 48px;
+  max-width: 860px;
+}
+.doc h1,
+.doc h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+.doc h1 {
+  font-size: 36px;
+  margin-top: 0;
+}
+.doc h2 {
+  font-size: 26px;
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.doc pre {
+  background: #f1f4ef;
+  padding: 14px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.doc pre code {
+  background: none;
+  padding: 0;
+}
+.doc table {
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+  font-size: 14px;
+}
+.doc th,
+.doc td {
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.doc-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  font-size: 14px;
+  margin: 24px auto 0;
+  max-width: 860px;
+}
+.doc-nav a[aria-current='page'] {
+  font-weight: 650;
+  color: var(--ink);
+  text-decoration: none;
+}
+@media (max-width: 760px) {
+  nav.links {
+    gap: 14px;
+  }
+  nav.links .wide {
+    display: none;
+  }
+  .shot,
+  .shot:nth-child(even) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .shot:nth-child(even) .copy {
+    order: 0;
+  }
+}
+.doc p code,
+.doc li code,
+.doc td code {
+  overflow-wrap: anywhere;
+}

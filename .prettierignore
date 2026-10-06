@@ -1,0 +1,16 @@
+# Generated, vendored, or build output
+package-lock.json
+dist/
+.next/
+.vinext/
+.wrangler/
+.sites-runtime/
+.test-build/
+src-tauri/target/
+src-tauri/gen/
+src-tauri/icons/
+drizzle/
+vendor/
+# Vendored verbatim from shadcn; keep registry source intact
+components/ui/
+_site
