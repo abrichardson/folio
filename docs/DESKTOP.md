@@ -23,7 +23,7 @@ For interface-only work, `npm run dev` serves the screens in a browser with fict
 
 The **Desktop installers** workflow builds an unsigned macOS disk image (Apple Silicon and Intel) and Windows installers (`.msi` and `.exe`). It runs only on demand (**Actions → Desktop installers → Run workflow**, choosing the branch to build) and on version tags (`v*`). It does not run on pull requests. Download the files from the run's **Artifacts** section. For a version tag it also creates a GitHub Release with the installers attached; the website's download button points to the latest release.
 
-To release: update `version` in `src-tauri/tauri.conf.json` and `package.json`, merge, then tag `main` (`git tag v0.2.0 && git push origin v0.2.0`).
+To release: update `version` in `src-tauri/tauri.conf.json` and `package.json`, merge, then tag `main` (`git tag v0.2.0 && git push origin v0.2.0`). Creating the release on GitHub (**Releases → Draft a new release**, with a new tag on `main`) works the same way. To rebuild the installers for an existing release, run the workflow by hand and enter its tag in **release_tag**; files with the same names are replaced.
 
 Unsigned builds work but show warnings: on macOS, right-click the app and choose **Open** the first time; on Windows, choose **More info → Run anyway**.
 
